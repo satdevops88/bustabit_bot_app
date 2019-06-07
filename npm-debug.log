@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   '--production',
+1 verbose cli   'windows-build-tools' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData windows-build-tools
+8 silly fetchNamedPackageData windows-build-tools
+9 silly mapToRegistry name windows-build-tools
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'windows-build-tools',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'windows-build-tools',
+12 silly mapToRegistry   name: 'windows-build-tools',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/windows-build-tools
+14 verbose request uri https://registry.npmjs.org/windows-build-tools
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 7:46:33 PM
+17 verbose request id db01b08c53759d28
+18 http request GET https://registry.npmjs.org/windows-build-tools
+19 http 200 https://registry.npmjs.org/windows-build-tools
+20 verbose headers { date: 'Wed, 01 May 2019 10:46:33 GMT',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'transfer-encoding': 'chunked',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'set-cookie': [ '__cfduid=d9e3c5e79734cf36d3a6b8a6665b444971556707593; expires=Thu, 30-Apr-20 10:46:33 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+20 verbose headers   'cf-cache-status': 'HIT',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'cf-ray': '4d012c19d800a5ee-NRT',
+20 verbose headers   etag: 'W/"614564cd4cf8298657947f1f58c359e3"',
+20 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 verbose headers   'last-modified': 'Sat, 23 Feb 2019 04:49:25 GMT',
+20 verbose headers   vary: 'accept-encoding, accept',
+20 verbose headers   'x-amz-meta-rev': '138-4b0396bbeb831578078d6d9db85dd867',
+20 verbose headers   server: 'cloudflare',
+20 verbose headers   'content-encoding': 'gzip' }
+21 silly get cb [ 200,
+21 silly get   { date: 'Wed, 01 May 2019 10:46:33 GMT',
+21 silly get     'content-type': 'application/json',
+21 silly get     'transfer-encoding': 'chunked',
+21 silly get     connection: 'keep-alive',
+21 silly get     'set-cookie': [ '__cfduid=d9e3c5e79734cf36d3a6b8a6665b444971556707593; expires=Thu, 30-Apr-20 10:46:33 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+21 silly get     'cf-cache-status': 'HIT',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'cf-ray': '4d012c19d800a5ee-NRT',
+21 silly get     etag: 'W/"614564cd4cf8298657947f1f58c359e3"',
+21 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 silly get     'last-modified': 'Sat, 23 Feb 2019 04:49:25 GMT',
+21 silly get     vary: 'accept-encoding, accept',
+21 silly get     'x-amz-meta-rev': '138-4b0396bbeb831578078d6d9db85dd867',
+21 silly get     server: 'cloudflare',
+21 silly get     'content-encoding': 'gzip' } ]
+22 verbose get saving windows-build-tools to /root/.npm/registry.npmjs.org/windows-build-tools/.cache.json
+23 verbose correctMkdir /root/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: Unsupported platform for windows-build-tools@5.1.0: wanted {"name":"windows-build-tools","version":"5.1.0","description":"Install C++ Build Tools for Windows using npm","main":"dist/index.js","scripts":{"test":"npm run lint && npm run unit","unit":"jest","postinstall":"node ./dist/index.js","build":"tsc -p tsconfig.json","prepare":"npm run build","start":"npm run build && npm run postinstall","lint":"tslint -c tslint.json -p tsconfig.json \"src/**/*.ts\""},"repository":{"type":"git","url":"git+https://github.com/felixrieseberg/windows-build-tools.git"},"os":["win32"],"keywords":["Windows","Build Tools","node-gyp","native","c++"],"engines":{"node":">=8.0.0"},"author":{"name":"Felix Rieseberg","email":"felix@felixrieseberg.com"},"license":"MIT","bugs":{"url":"https://github.com/felixrieseberg/windows-build-tools/issues"},"homepage":"https://github.com/felixrieseberg/windows-build-tools#readme","devDependencies":{"@types/chalk":"^2.2.0","@types/fs-extra":"^5.0.4","@types/jest":"^23.3.1","@types/node":"^10.9.4","jest":"^23.5.0","ts-jest":"^22.4.6","tslint":"^5.11.0","tslint-microsoft-contrib":"^5.2.1","typescript":"^3.0.3"},"dependencies":{"chalk":"^2.4.1","debug":"^4.1.1","fs-extra":"^7.0.1","in-gfw":"^1.2.0","nugget":"^2.0.1","string-width":"^3.0.0"},"jest":{"moduleFileExtensions":["ts","tsx","js"],"transform":{"^.+\\.(ts|tsx)$":"ts-jest"},"globals":{"ts-jest":{"tsConfigFile":"tsconfig.json"}},"testMatch":["**/__tests__/**/*-test.+(ts|tsx|js)"]},"gitHead":"ea6905b7b77d76c6bdd96eacbf4ac67cb5d232ec","_id":"windows-build-tools@5.1.0","_npmVersion":"5.6.0","_nodeVersion":"10.0.0","_npmUser":{"name":"felixrieseberg","email":"felix@felixrieseberg.com"},"dist":{"integrity":"sha512-X80Lt9ERJg3O3lhz9V4eLL+D4HgJCKJgvRe0Vkmr7XPXwuzSYqmiHBhqvTKUSDLrJit2uXwwbM9VKkSVT8glPA==","shasum":"53233e7163f73933ede9ea0e20e2dc9514236368","tarball":"https://registry.npmjs.org/windows-build-tools/-/windows-build-tools-5.1.0.tgz","fileCount":57,"unpackedSize":89442,"npm-signature":"-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcKITmCRA9TVsSAnZWagAAiUYP/2Uca6ZxGUke0Nz5LJKK\nHYDqObEDsEVkFTuPoV5krooLUJ8M7uQqI3JLQjGYitqfz5V6ozCe2/asJog8\n2QJN9Y9nN6VdgqfAauvytFZkdJMem6sc/vD2bexgLNDNKXNDZLq3wjRQBqLP\nDhc3uCP8WEDAR0OvEfoLFqLeymC2q7gHHuRfIIaH+zwzG4m6i4fX2jD2OqU6\nNek7HxmMyskXDIS3rFM6pcP4q0cW90fDHU7e4LJoBbNohQO0n3Hrdte/QUXi\nOmuo4S5BoAT/uhd7FR9WMB7pigjMF97ZNsaNZUMNO8Ej3IG8c1wvm36NC3iF\nwxfllWA1X6ePDVBNs2V5UE/7WWYUcjiFZFcofZQH2+rYLW78wBwLDuVndzLv\nUcQygRImkiQDFX1+TlNQiby6PZlO+zDZ/UpMAWvCY0yf3SHUM/4yrkiObN5j\nKvF3b8RkwetZ/GoD7DIZp/YdW1SoSB9bJsVTzY03lCLYf00yhTPs9xfMGSB+\nemWl2FUmaNJvZ+/qeopv/dnVlV2zOii58P75EQy67nkSnKpeODa+X+mAeWWn\nLL3CmNCHwKGQ7lVK+z+3KbOE9IyB6lMNytpsZWTEV2/pV9BYtuK3sXiQEPZY\nEFPTFPRO4YhRsk7GRa9WrIq5u4pQCjDiLCvWg9IijofbfIs5ncXlvq1ruxIP\nVSDE\r\n=/qDQ\r\n-----END PGP SIGNATURE-----\r\n"},"maintainers":[{"name":"felixrieseberg","email":"felix@felixrieseberg.com"}],"directories":{},"_npmOperationalInternal":{"host":"s3://npm-registry-packages","tmp":"tmp/windows-build-tools_5.1.0_1546159333566_0.5186750391717372"},"_hasShrinkwrap":false,"_from":"windows-build-tools","_resolved":"https://registry.npmjs.org/windows-build-tools/-/windows-build-tools-5.1.0.tgz","_shasum":"53233e7163f73933ede9ea0e20e2dc9514236368","_requested":{"raw":"windows-build-tools","scope":null,"escapedName":"windows-build-tools","name":"windows-build-tools","rawSpec":"","spec":"latest","type":"tag"},"_spec":"windows-build-tools","_where":"/home/ec2-user/bustakr/bot-app","_args":[[{"raw":"windows-build-tools","scope":null,"escapedName":"windows-build-tools","name":"windows-build-tools","rawSpec":"","spec":"latest","type":"tag"},"/home/ec2-user/bustakr/bot-app"]],"readme":"ERROR: No README data found!","warnings":[{"code":"ENOTSUP","required":{"node":">=8.0.0"},"pkgid":"windows-build-tools@5.1.0"}]} (current: {"os":"linux","cpu":"x64"})
+40 verbose stack     at checkPlatform (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:45:14)
+40 verbose stack     at thenWarnEngineIssues (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:41:5)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+40 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:21:14)
+40 verbose stack     at module.exports.isInstallable (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:38:3)
+40 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+40 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+40 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+40 verbose stack     at checkSelf (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:46:72)
+40 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+41 verbose pkgid windows-build-tools@5.1.0
+42 verbose cwd /home/ec2-user/bustakr/bot-app
+43 error Linux 4.4.0-137-generic
+44 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--global" "--production" "windows-build-tools"
+45 error node v6.9.2
+46 error npm  v3.10.9
+47 error code EBADPLATFORM
+48 error notsup Unsupported platform for windows-build-tools@5.1.0: wanted {"os":"win32","arch":"any"} (current: {"os":"linux","arch":"x64"})
+49 error notsup Valid OS:    win32
+49 error notsup Valid Arch:  any
+49 error notsup Actual OS:   linux
+49 error notsup Actual Arch: x64
+50 verbose exit [ 1, true ]
