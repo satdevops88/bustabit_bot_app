@@ -29,7 +29,7 @@ let tab = tabGroup.addTab({
         let webview = tab.webview;
             if (!!webview) {
                 webview.addEventListener('dom-ready', () => {
-                   // webview.openDevTools();
+                   webview.openDevTools();
                 })
             }
         }
@@ -53,7 +53,7 @@ ipcRenderer.on('show-message', (event, msg) => {
             let webview = tab.webview;
                 if (!!webview) {
                     webview.addEventListener('dom-ready', () => {
-                       //webview.openDevTools();
+                       webview.openDevTools();
                  })
                 }
             }

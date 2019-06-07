@@ -1,2 +1,6 @@
 node_modules
 dist
+bot_list.txt
+bot_list1.txt
+Config.js
+GameConfig.js
