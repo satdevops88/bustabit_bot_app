@@ -29,7 +29,7 @@ let tab = tabGroup.addTab({
         let webview = tab.webview;
             if (!!webview) {
                 webview.addEventListener('dom-ready', () => {
-                   webview.openDevTools();
+                //    webview.openDevTools();
                 })
             }
         }
@@ -41,7 +41,7 @@ ipcRenderer.on('show-message', (event, msg) => {
 
     let tab = tabGroup.addTab({
             title: `User: ${msg.username}`,
-            src: `./content.html?username=${msg.username}&ods=${msg.ods}&money=${msg.money}&lossStreak=${msg.lossStreak}`,
+            src: `./content.html?username=${msg.username}&ods=${msg.ods}&min_money=${msg.min_money}&max_money=${msg.max_money}&random_unit=${msg.random_unit}&lossStreak=${msg.lossStreak}`,
             webviewAttributes: {
                 'nodeintegration': true
             },
@@ -53,7 +53,7 @@ ipcRenderer.on('show-message', (event, msg) => {
             let webview = tab.webview;
                 if (!!webview) {
                     webview.addEventListener('dom-ready', () => {
-                       webview.openDevTools();
+                    //    webview.openDevTools();
                  })
                 }
             }

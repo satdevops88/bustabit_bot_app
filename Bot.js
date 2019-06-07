@@ -30,13 +30,13 @@ function formatDecimals(n, decimals) {
 
 /* BOT
 -----------------*/
-function MeroBot(username, ods, money, lossStreak) {
+function MeroBot(username, ods, min_money, max_money, random_unit, lossStreak) {
 	var self = this;
 	self.Config = require('./Config');
 	self.Config.USER = username;
 	var gameConfig = require('./GameConfig');
 	gameConfig.TARGET = parseFloat(ods);
-	gameConfig.BET = parseFloat(money);
+	gameConfig.BET = parseFloat(min_money);
 	gameConfig.LOSSSTREAK = parseInt(lossStreak);
 
 	//variables
@@ -59,6 +59,9 @@ function MeroBot(username, ods, money, lossStreak) {
 	var played = false;
 	var lostLast = false;
 
+	var minBet = parseFloat(min_money);
+	var maxBet = parseFloat(max_money);
+	var random_unit = parseFloat(random_unit);
 	currentBet = baseSatoshi;
 
 
@@ -170,8 +173,9 @@ function MeroBot(username, ods, money, lossStreak) {
 			};
 			*/
 			//calculate random new bet
-
-
+			if(played) {
+				currentBet = Math.floor((minBet + Math.random() * (maxBet - minBet)) / random_unit) * random_unit;
+			}
 
 			
 			//check if maxumum betting amount is reached

@@ -22,7 +22,10 @@ function findGetParameter(parameterName) {
 document.addEventListener('DOMContentLoaded', () => {
     let username = findGetParameter('username');
     let ods = findGetParameter('ods');
-    let money = findGetParameter('money');
+    // let money = findGetParameter('money');
+    let min_money = findGetParameter('min_money');
+    let max_money = findGetParameter('max_money');
+    let random_unit = findGetParameter('random_unit');
     let lossStreak = findGetParameter('lossStreak');
 
     console.log(username);
@@ -41,7 +44,8 @@ var logs = document.getElementById('logs');
 
     });
 
-    bot(username, ods, money, lossStreak);
+    // bot(username, ods, money, lossStreak);
+    bot(username, ods, min_money, max_money, random_unit, lossStreak);
 });
 
 
